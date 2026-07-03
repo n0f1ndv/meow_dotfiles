@@ -2,13 +2,12 @@
 # ~/.bashrc
 #
 
-echo $(fortune) | cowsay -r | lolcat
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+# alias vim='nvim'
 
 force_color_prompt=yes
 

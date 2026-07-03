@@ -42,11 +42,11 @@ set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86AudioMute exec amixer set Master 0%
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5%
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5%
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10%
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10%
 
 # Power menu
-bindsym $mod+x exec rofi -show power-menu -modi power-menu:.config/rofi/rofi-power-menu
+bindsym $mod+Shift+x exec rofi -show power-menu -modi power-menu:.config/rofi/rofi-power-menu
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -158,6 +158,16 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# move app to specific workpace
+assign [class="code-oss"] 1
+assign [class="obsidian"] 2
+assign [class="Helium"] 3
+assign [class="Spotify"] 4
+assign [class="eu.betterbird.Betterbird"] 5
+
+assign [class="mGBA"] 9
+assign [class="steam"] 9
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -193,8 +203,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # border
-default_border pixel
-
 gaps inner 10
 
 # polybar

@@ -49,6 +49,6 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 	unset f
 fi
 
-feh --bg-scale .config/wallpapers/a_beach_with_a_bridge_and_trees_01.jpg
+feh --bg-fill .config/wallpapers/space_omori.png
 picom &
 exec i3

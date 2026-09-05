@@ -49,6 +49,11 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 	unset f
 fi
 
-feh --bg-fill .config/wallpapers/space_omori.png
+feh --bg-fill .config/wallpapers/a_cartoon_of_a_woman_walking_in_a_city.jpg
+# feh --bg-fill .config/wallpapers/space_omori.png 
+# feh --bg-fill .config/wallpapers/abbeyroad.png
+
+xinput disable 11
 picom &
+setxkbmap pl
 exec i3
